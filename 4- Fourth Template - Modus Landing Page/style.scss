@@ -1,0 +1,12 @@
+// Importing Other Sass Files
+@use 'sass/partials/partials';
+@use 'sass/partials/variables';
+
+// Importing Sections Files
+@use 'sass/sections/header';
+@use 'sass/sections/hero';
+@use 'sass/sections/history';
+// @use 'sass/sections/features';
+@use 'sass/sections/clients';
+@use 'sass/sections/contact';
+@use 'sass/sections/footer';

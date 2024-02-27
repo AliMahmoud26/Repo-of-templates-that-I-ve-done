@@ -1,0 +1,51 @@
+// Importing Partials Files
+@use '../partials/variables' as *;
+
+
+// Styling the footer section
+.footer {
+    padding: 4rem 0;
+    background-color: $lightBlue;
+    color: $white;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .right {
+            font-size: 1.1rem;
+        }
+
+        .socials {
+            display: flex;
+
+            i {
+                padding-left: 2rem;
+                font-size: 1.35rem;
+                transition: $transition;
+                cursor: pointer;
+
+                &:hover {
+                    color: $darkBlue;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .footer {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .right {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

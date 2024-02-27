@@ -1,0 +1,115 @@
+// Importing Partials Files
+@use '../partials/variables' as *;
+
+
+// Styling the hero section
+.hero {
+    margin-top: 1rem;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+
+    .overlay {
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        background-color:rgb(0 0 0 / 60%);
+    }
+
+    .intro-text {
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%, -50%);
+        text-align: center;
+        color: $white;
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        h1 {
+            margin: 2.5rem 0 3.5rem;
+            font-size: 3rem;
+        }
+
+        .btns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .transparent-btn,
+            .colored-btn {
+                color: $white;
+                padding: 1rem 2.5rem;
+                border-radius: .25rem;
+                font-size: 1.0125rem;
+                transition: $transition;
+            }
+
+            .transparent-btn {
+                border: 2px solid $borderColor;
+
+                &:hover {
+                    // background-color: $lightBlue;
+                    // border-color: $lightBlue;
+                    color: $lightBlue;
+                }
+
+            }
+
+            .colored-btn {
+                border: 2px solid $lightBlue;
+                background-color: $lightBlue;
+                margin-left: 1rem;
+
+                &:hover {
+                    background-color: transparent; 
+                    border-color: $white;
+                    color: $lightBlue;
+                }
+            }
+        }
+    }
+
+    > i {
+        position: absolute;
+        left: 50%;
+        bottom: .5rem;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+        color: $lightBlue;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .hero {
+        .intro-text {
+            h3 {
+                font-size: 1rem;
+            }
+    
+            h1 {
+                // margin: 2.5rem 0 3.5rem;
+                font-size: 2rem;
+            }
+
+            .btns {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .colored-btn {
+                    margin-top: 1rem;
+                    font-size: .875rem;
+                    // padding: 1rem 1.9rem;
+                }
+            }
+        }
+    }
+}

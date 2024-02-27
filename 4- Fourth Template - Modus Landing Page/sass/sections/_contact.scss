@@ -1,0 +1,167 @@
+// Importing Partials Files
+@use '../partials/variables' as *;
+
+
+// Styling the contact section
+.contact {
+    padding: 5rem 0;
+    margin-top: 8rem;
+    background-color: $dark;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .box {
+            margin-left: 1rem;
+            border: 2px solid $borderColor;
+
+            h2 {
+                color: $white;
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+        .about-box {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 50%;
+            text-align: center;
+            padding: 4rem 5rem 6rem;
+
+            h2 {
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -2rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: .18rem;
+                    width: 2.5rem;
+                    background-color: $lightBlue;
+                }
+            }
+
+            p {
+                margin-top: 3rem;
+                color: $white;
+                line-height: 1.7;
+            }
+        }
+
+        .contact-box {
+            padding: 4.6rem 5rem;
+            display: flex;
+            flex-direction: column;
+            flex-basis: 50%;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                .form {
+                    display: flex;
+                    flex-direction: column;                    
+                }
+
+                label {
+                    color: $white;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                }
+
+                input {
+                    border: none;
+                    outline: none;
+                    background-color: inherit;
+                    border-bottom: 1px solid $lightGray;
+                    margin-top: 1rem;
+                }
+
+                .email {
+                    margin-bottom: 3rem;
+                }
+
+                .message {
+                    > input {
+                        margin-bottom: 1.5rem;
+                    }
+                }
+
+                .send-btn {
+                    color: $lightBlue;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-top: 1rem;
+                    align-self: flex-end;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $darkBlue;
+                    }
+                }
+            }
+
+            h2 {
+                text-align: center;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 991px) {
+    .contact {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .box {
+                margin-bottom: 1rem;
+            }
+
+            .about-box {
+                width: 450px;
+            }
+
+            .contact-box {
+                width: 450px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .contact {
+        .container {
+            .about-box {
+                width: 350px;
+            }
+
+            .contact-box {
+                width: 350px;
+
+                h2 {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .contact {
+        .container {
+            .about-box {
+                width: 300px;
+            }
+
+            .contact-box {
+                width: 300px;
+            }
+        }
+    }
+}

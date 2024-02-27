@@ -1,0 +1,194 @@
+// Importing Partials Files
+@use '../partials/variables' as *;
+
+
+// Styling the history section
+.history {
+    padding: 5rem 0 8rem;
+    background-color: $borderColor;
+
+    .special-heading {
+        &::after {
+            content: '';
+            background-color: $borderColor;
+        }
+    }
+
+    .box-container {
+        display: flex;
+        padding: 7rem 0;
+        .box {
+            overflow: hidden;
+            position: relative;
+            img {
+                height: 42.857rem;
+                width: 25rem;
+            }
+
+            .content {
+                position: absolute;
+                left: 0;
+                padding: 3rem 1.5rem;
+                background-color: $lightBlue;
+                width:100%;
+                transition: $transition;
+                bottom: -100%;
+                opacity: .9;
+                text-align: center;
+                color: $white;
+
+                h2 {
+                    // padding-top: 1.5rem;
+                    // letter-spacing: .125rem;
+                    font: {
+                        size: 1.25rem;
+                        weight: normal;
+                    }
+                }
+                
+                p {
+                    line-height: 1.6;
+                    margin: 3rem 0;
+                }
+
+                .socials {
+                    // margin-bottom: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    
+                    a {
+                        color: $white;
+                        font-size: 1.5rem;
+                        
+                        i {
+                            padding-left: 2rem;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                .content {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2rem;
+
+        .card {
+            background-color: $white;
+            box-shadow: $boxShadow;
+            padding: 3rem 3rem 4rem;
+            text-align: center;
+            transition: $transition;
+            cursor: context-menu;
+
+            &:hover {
+                transform: translateY(-.75rem);
+            }
+
+            > i {
+                color: $lightGray;
+                font-size: 2rem;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -1rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: .18rem;
+                    width: 1.875rem;
+                    background-color: $lightBlue;
+                }
+            }
+
+            .text {
+                margin-top: 2rem;
+
+                h3 {
+                    color: $dark;
+                    letter-spacing: .2rem;
+                }
+
+                p {
+                    margin-top: 2.5rem;
+                    color: $lightGray;
+                    line-height: 1.7;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 991px) {
+    .history {
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            .box {
+                // margin: 0 auto;
+                img {
+                    height: 38rem;
+                    width: 20rem;
+                }
+    
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .history {
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+
+            .box {
+                margin: 0 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .history {
+        .box-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .history {
+        .container {
+            .card {
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .history {
+        .container {
+            .card {
+                margin-right: 3rem;
+            }
+        }
+    }
+}

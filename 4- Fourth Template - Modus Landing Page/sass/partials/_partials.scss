@@ -1,0 +1,57 @@
+// Importing Google Font
+
+// Importing Other Partials Files
+@forward './variables';
+
+// Global Styling
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: {
+        size: 14px;
+        family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.container {
+    padding: 0 1.125rem;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+// With The Responsive Design
+/* Small */
+@media (min-width: 768px) {
+    .container {
+    width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+    width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+    width: 1170px;
+    }
+}

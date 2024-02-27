@@ -1,0 +1,67 @@
+// Set of colors
+$white: #fff;
+$dark: #222;
+$lightGray: #545B6B;
+$lightBlue: #00E1FF;
+$darkBlue: #6599FF;
+$borderColor: #E6E6E6;
+
+// Transitions
+$transition: all .4s ease;
+
+// Text
+$text: uppercase;
+
+// Box Shadows
+$boxShadow: 0 5px 10px rgba(0, 0, 0, .2);
+
+
+
+// Special styling
+.special-heading {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: $dark;
+    margin-bottom: 5rem;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &::before {
+        height: 2px;
+        background-color: $lightBlue;
+        bottom: -2.15rem;
+        width: 8.57rem;
+    }
+
+    &::after {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        border: 2px solid $lightBlue;
+        bottom: -2.72rem;
+        background-color: $white;
+    }
+}
+
+.special-paragraph {
+    text-align: center;
+    color: $lightGray;
+    line-height: 1.7;
+    font-size: 1.0125rem;
+}
+
+
+@media (max-width: 767px) {
+    .special-paragraph {
+        padding: 0 2rem;
+        font-size: 1rem;
+    }
+}
