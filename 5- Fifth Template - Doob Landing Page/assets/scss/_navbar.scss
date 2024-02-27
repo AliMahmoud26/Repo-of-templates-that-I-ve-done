@@ -1,0 +1,64 @@
+// Impoting Variables Rules
+@use 'variables' as*;
+@use 'mixins' as*;
+
+// Styling the header section
+.header {
+    @include flex-between;
+    padding: 2.25rem 6rem;
+    img {
+        height: 2rem;
+    }
+    .container {
+        .combine {
+            display: flex;
+            justify-content: space-between;
+            .main-nav {
+                ul {
+                    display: flex;
+                    li {
+                        padding-left: 2rem;
+                        a {
+                            color: $light-blue;
+                            transition: $transition;
+                            font: {
+                                weight: 500;
+                            }
+                            &:hover {
+                                color: $light-red;
+                            }
+                        }
+                    }
+                }
+            }
+            .links {
+                & > span {
+                    color: $light-blue;
+                    margin-right: 1.8rem;
+                    cursor: pointer;
+                    font: {
+                        size: .875rem;
+                        weight: 500;
+                    }
+                }
+                a {
+                    color: $light-red;
+                    background-color: $white;
+                    padding: .875rem 1.5rem;
+                    box-shadow: $box-shadow;
+                    border-radius: .375rem;
+                    transition: $transition-2;
+                    & > span {
+                        i {
+                            font-size: 1.5rem;
+                        }
+                    }
+                    &:hover {
+                        background-color: $light-red;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

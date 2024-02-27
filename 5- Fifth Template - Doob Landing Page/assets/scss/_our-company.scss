@@ -1,0 +1,40 @@
+@use 'variables' as*;
+@use 'mixins' as*;
+
+.our-company {
+    padding: $padding 0 0;
+    .container {
+        @include flex-between;
+        .image {
+            margin-right: 10rem;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .text {
+            p {
+                margin-top: 2.25rem;
+                color: $light-grey-2;
+                line-height: 1.6;
+            }
+            .arrows {
+                margin-top: 1.5rem;
+                .right {
+                    font-size: 1.5rem;
+                    color: $light-grey-2;
+                    margin-right: 0.3rem;
+                }
+                .left {
+                    font-size: 1.6rem;
+                    color: $dark-blue;
+                    transition: $transition-2;
+                    &:hover {
+                        color: $light-red;
+                    }
+                }
+            }
+        }
+    }
+}
